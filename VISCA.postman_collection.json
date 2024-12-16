@@ -1,0 +1,827 @@
+{
+	"info": {
+		"_postman_id": "b03d781e-71c8-4fa6-b375-2b84b5cf2524",
+		"name": "VISCA",
+		"description": "A collection of all possible GET and PUT calls for the Visca over IP microservice. You can replace the values in double curly brackets manually or create matching environment variables that will automatically fill in the values.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10379859"
+	},
+	"item": [
+		{
+			"name": "GET Power",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/power",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{deviceFQDN}}",
+						"power"
+					]
+				},
+				"description": "Returns the camera's power status. Either \"on\" or \"off\"."
+			},
+			"response": [
+				{
+					"name": "GET Power",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/power",
+							"protocol": "http",
+							"host": [
+								"{{microserviceURL}}"
+							],
+							"path": [
+								"{{deviceFQDN}}",
+								"power"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Dec 2024 14:11:41 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5"
+						}
+					],
+					"cookie": [],
+					"body": "\"on\""
+				}
+			]
+		},
+		{
+			"name": "GET Focus",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/focus",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{deviceFQDN}}",
+						"focus"
+					]
+				},
+				"description": "Returns the camera's current focus setting. Either \"manual\" or \"auto\""
+			},
+			"response": [
+				{
+					"name": "GET Focus",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/focus",
+							"protocol": "http",
+							"host": [
+								"{{microserviceURL}}"
+							],
+							"path": [
+								"{{deviceFQDN}}",
+								"focus"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Dec 2024 14:12:42 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7"
+						}
+					],
+					"cookie": [],
+					"body": "\"auto\""
+				}
+			]
+		},
+		{
+			"name": "GET Preset",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/preset",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{deviceFQDN}}",
+						"preset"
+					]
+				},
+				"description": "Returns the preset number that the camera was last set to."
+			},
+			"response": [
+				{
+					"name": "GET Preset",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/preset",
+							"protocol": "http",
+							"host": [
+								"{{microserviceURL}}"
+							],
+							"path": [
+								"{{deviceFQDN}}",
+								"preset"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Dec 2024 14:12:50 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4"
+						}
+					],
+					"cookie": [],
+					"body": "\"0\""
+				}
+			]
+		},
+		{
+			"name": "GET Coordinates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/ptzabsolute",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{deviceFQDN}}",
+						"ptzabsolute"
+					]
+				},
+				"description": "Returns the zoom, pan, and tilt coordinates that the camera is currently set to."
+			},
+			"response": [
+				{
+					"name": "GET Coordinates",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/ptzabsolute",
+							"protocol": "http",
+							"host": [
+								"{{microserviceURL}}"
+							],
+							"path": [
+								"{{deviceFQDN}}",
+								"ptzabsolute"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Dec 2024 14:12:56 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"pan\": 150,\n    \"tilt\": -100,\n    \"zoom\": 500\n}"
+				}
+			]
+		},
+		{
+			"name": "GET Autotracking",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/autotracking",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{deviceFQDN}}",
+						"autotracking"
+					]
+				},
+				"description": "Returns the camera's current autotracking mode. Either \"on\" or \"off\"."
+			},
+			"response": [
+				{
+					"name": "GET Autotracking",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/autotracking",
+							"protocol": "http",
+							"host": [
+								"{{microserviceURL}}"
+							],
+							"path": [
+								"{{deviceFQDN}}",
+								"autotracking"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Dec 2024 14:11:41 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5"
+						}
+					],
+					"cookie": [],
+					"body": "\"on\""
+				}
+			]
+		},
+		{
+			"name": "SET Power",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"on\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/power",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{deviceFQDN}}",
+						"power"
+					]
+				},
+				"description": "Accepts \"on\", \"off\", or \"reboot\"."
+			},
+			"response": [
+				{
+					"name": "SET Power",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\"on\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/power",
+							"protocol": "http",
+							"host": [
+								"{{microserviceURL}}"
+							],
+							"path": [
+								"{{deviceFQDN}}",
+								"power"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Dec 2024 14:34:31 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5"
+						}
+					],
+					"cookie": [],
+					"body": "\"ok\""
+				}
+			]
+		},
+		{
+			"name": "SET Focus",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"auto\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/focus",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{deviceFQDN}}",
+						"focus"
+					]
+				},
+				"description": "Accepts \"manual\", \"auto\", or \"trigger\". \"Trigger\" will trigger the one-push autofocus."
+			},
+			"response": [
+				{
+					"name": "SET Focus",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\"auto\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/focus",
+							"protocol": "http",
+							"host": [
+								"{{microserviceURL}}"
+							],
+							"path": [
+								"{{deviceFQDN}}",
+								"focus"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Dec 2024 14:34:31 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5"
+						}
+					],
+					"cookie": [],
+					"body": "\"ok\""
+				}
+			]
+		},
+		{
+			"name": "SET Preset",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"0\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/preset",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{deviceFQDN}}",
+						"preset"
+					]
+				},
+				"description": "Moves the camera to a numbered preset. This does not define new presets. Presets are defined through the camera's web UI."
+			},
+			"response": [
+				{
+					"name": "SET Preset",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\"0\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/preset",
+							"protocol": "http",
+							"host": [
+								"{{microserviceURL}}"
+							],
+							"path": [
+								"{{deviceFQDN}}",
+								"preset"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Dec 2024 14:34:31 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5"
+						}
+					],
+					"cookie": [],
+					"body": "\"ok\""
+				}
+			]
+		},
+		{
+			"name": "SET Calibrate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/calibrate",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{deviceFQDN}}",
+						"calibrate"
+					]
+				},
+				"description": "Tells the camera to calibrate its PTZ motors."
+			},
+			"response": [
+				{
+					"name": "SET Calibrate",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/calibrate",
+							"protocol": "http",
+							"host": [
+								"{{microserviceURL}}"
+							],
+							"path": [
+								"{{deviceFQDN}}",
+								"calibrate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Dec 2024 14:34:31 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5"
+						}
+					],
+					"cookie": [],
+					"body": "\"ok\""
+				}
+			]
+		},
+		{
+			"name": "SET PTZDrive",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\":\"in\",\n    \"zoom_speed\": 1,\n    \"pan_tilt_speed\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/ptzdrive",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{deviceFQDN}}",
+						"ptzdrive"
+					]
+				},
+				"description": "Moves the camera in one direction until a stop command is sent. Supported actions are \"in\", \"out\", \"left\", \"right\", \"up\", \"down\", \"pan stop\", and \"zoom stop\".\n\nAllowed zoom speed range is: 0-7\n\nAllowed pan_tilt_speed range is: 1-14\n\nIf not provided in the body, the default zoom speed is 2 and the default pan-tilt speed is 5."
+			},
+			"response": [
+				{
+					"name": "SET PTZDrive",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\":\"in\",\n    \"zoom_speed\": 1,\n    \"pan_tilt_speed\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/ptzdrive",
+							"protocol": "http",
+							"host": [
+								"{{microserviceURL}}"
+							],
+							"path": [
+								"{{deviceFQDN}}",
+								"ptzdrive"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Dec 2024 14:34:31 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5"
+						}
+					],
+					"cookie": [],
+					"body": "\"ok\""
+				}
+			]
+		},
+		{
+			"name": "SET Coordinates",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pan\": 150,\n    \"tilt\": -100,\n    \"zoom\": 500\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/ptzabsolute",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{deviceFQDN}}",
+						"ptzabsolute"
+					]
+				},
+				"description": "Sends a camera to exact coordinates. Acceptable combinations are {pan, tilt}, {zoom}, {pan, tilt, zoom}\n\nTo get coordinates for your camera, use the camera's web UI or a controller to move it and use GET ptzabsolute to get its coordinates."
+			},
+			"response": [
+				{
+					"name": "SET Coordinates",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pan\": 150,\n    \"tilt\": -100,\n    \"zoom\": 500\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/ptzabsolute",
+							"protocol": "http",
+							"host": [
+								"{{microserviceURL}}"
+							],
+							"path": [
+								"{{deviceFQDN}}",
+								"ptzabsolute"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Dec 2024 14:34:31 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5"
+						}
+					],
+					"cookie": [],
+					"body": "\"ok\""
+				}
+			]
+		},
+		{
+			"name": "SET Autotracking",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"off\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/autotracking",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{deviceFQDN}}",
+						"autotracking"
+					]
+				},
+				"description": "Accepts \"on\" or \"off\". Only works with cameras that support autotracking."
+			},
+			"response": [
+				{
+					"name": "SET Autotracking",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\"on\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{microserviceURL}}/{{deviceFQDN}}/autotracking",
+							"protocol": "http",
+							"host": [
+								"{{microserviceURL}}"
+							],
+							"path": [
+								"{{deviceFQDN}}",
+								"autotracking"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 16 Dec 2024 14:34:31 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5"
+						}
+					],
+					"cookie": [],
+					"body": "\"ok\""
+				}
+			]
+		}
+	]
+}
