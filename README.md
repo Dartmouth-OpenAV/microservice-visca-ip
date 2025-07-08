@@ -6,4 +6,6 @@ VISCA over IP is a network-based communication protocol used to control PTZ (Pan
 
 [Sony Professional PTZ Camera](https://pro.sony/ue_US/products/ptz-network-cameras/srg-x400)
 
+[Microservice curl test documentation](https://github.com/Dartmouth-OpenAV/documentation/blob/main/curl_test_readme.md)
+
 ![](https://github.com/Dartmouth-OpenAV/microservice-visca-ip/blob/main/photo.png)
