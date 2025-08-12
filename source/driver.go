@@ -1276,3 +1276,39 @@ func setAutoTrackingDo(socketKey string, state string) (string, error) {
 	// If we got here, the response was good, so successful return with the state indication
 	return "ok", nil
 }
+
+func healthCheck(socketKey string) (string, error) {
+	_, err := getSystemDo(socketKey)
+	returnStr := "true"
+	if err != nil && strings.Contains(err.Error(), "error sending command") {
+		returnStr = "false"
+	}
+	return `"` + returnStr + `"`, nil
+}
+
+// Gets the camera's current system state. Returns "System responded" or error message
+func getSystemDo(socketKey string) (string, error) {
+	function := "getSystemDo"
+
+	powerHexStr := "011000050000000081090002FF"
+
+	sent := convertAndSend(socketKey, powerHexStr)
+
+	if !sent {
+		errMsg := fmt.Sprintf(function + " - fk4kxy755 - error sending command")
+		framework.AddToErrors(socketKey, errMsg)
+		return errMsg, errors.New(errMsg)
+	}
+
+	respArr, errMsg, err := readAndConvert(socketKey, "GET")
+
+	if err != nil{
+		return errMsg, err
+	}
+
+	value := `"System responded"`
+	framework.Log(function + " - Decoded Response: "+ fmt.Sprintf("% x", respArr))
+
+	// If we got here, the response was good, so successful return with the state indication
+	return fmt.Sprintf(value), nil
+}
