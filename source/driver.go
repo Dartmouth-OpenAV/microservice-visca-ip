@@ -798,6 +798,18 @@ func setPresetRecallDo(socketKey string, state string) (string, error) {
 	function := "setPresetRecallDo"
 	state = strings.Trim(state, "\"")
 
+	// Calling a preset turns off autotracking, but the camera doesn't go to the called preset
+	// Turning off autotracking manually and waiting gives time for the preset command to work
+	if framework.CheckForEndPointInCache(socketKey, "autotracking") {
+		autotrackingState, _ := getAutoTracking(socketKey)
+
+		if autotrackingState == `"on"` {
+			time.Sleep(1 * time.Second)
+			setAutoTracking(socketKey, `"off"`)
+			time.Sleep(1 * time.Second)
+		}
+	}
+
 	presetHexStr := "01000007000000008101043F020" + string(state) + "FF"
 	
 	sent := convertAndSend(socketKey, presetHexStr)
