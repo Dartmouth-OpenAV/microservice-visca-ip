@@ -805,7 +805,10 @@ func setPresetRecallDo(socketKey string, state string) (string, error) {
 
 		if autotrackingState == `"on"` {
 			time.Sleep(1 * time.Second)
-			setAutoTracking(socketKey, `"off"`)
+			_, err := setAutoTracking(socketKey, `"off"`)
+			if err == nil {
+				framework.SetDeviceStateEndpoint(socketKey,"autotracking",`"off"`)
+			}
 			time.Sleep(1 * time.Second)
 		}
 	}
